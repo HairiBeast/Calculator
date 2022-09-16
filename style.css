@@ -92,7 +92,7 @@ body {
 .calculator input {
   width: 93%;
   height: 45px;
-  margin: 8px;
+  margin: 10 0 10 0px;
   border-radius: 20px;
   font-size: 34px;
   text-align: end;
@@ -103,6 +103,10 @@ body {
   background-color: var(--color-bg);
   box-shadow: var(--shadow-inner);
   cursor: pointer;
+}
+.button-div {
+  position: relative;
+  justify-items: center;
 }
 button {
   border-radius: 50px;
