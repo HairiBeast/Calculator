@@ -81,7 +81,9 @@ body {
   justify-content: center;
   height: 100vh;
 }
-.calculator {
+.calculator__body {
+  position: relative;
+  justify-items: center;
   width: 415px;
   display: inline-block;
   padding: 40px;
@@ -89,9 +91,9 @@ body {
   background-color: var(--color-bg);
   box-shadow: var(--shadow-outer);
 }
-.calculator input {
+.calculator__result {
   width: 93%;
-  height: 45px;
+  height: 50px;
   margin: 10 0 10 0px;
   border-radius: 20px;
   font-size: 34px;
@@ -104,10 +106,7 @@ body {
   box-shadow: var(--shadow-inner);
   cursor: pointer;
 }
-.button-div {
-  position: relative;
-  justify-items: center;
-}
+
 button {
   border-radius: 50px;
   font-size: 28px;
@@ -138,26 +137,26 @@ button:active {
   background-color: #27292b;
   box-shadow: none;
 }
-
-.dark-mode .button-div {
-  background-color: var(--color-calculator-dark);
-}
-.dark-mode .color {
-  background-color: 333333;
-  color: #56c2b8;
-}
-.dark-mode .calculator {
+/* ====== Sets style for calculator body background ========= */
+.dark-mode .calculator__body {
   background-color: var(--color-calculator-dark);
   box-shadow: none;
 }
-.dark-mode .calculator input {
+.dark-mode .calculator__body--inputs {
+  background-color: var(--color-calculator-dark);
+}
+/* ====== Sets style for results ========= */
+.dark-mode .calculator__result {
   background-color: var(--color-lighter-dark);
   box-shadow: none;
   color: var(--color-bg);
   cursor: pointer;
-}
-.dark-mode .calculator input {
   caret-color: var(--color-bg);
+}
+/* ====== Sets style for individual buttons ========= */
+.dark-mode .color {
+  background-color: 333333;
+  color: #56c2b8;
 }
 .dark-mode button {
   background-color: 333333;

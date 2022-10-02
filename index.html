@@ -12,35 +12,37 @@
     <title>Calculator</title>
   </head>
   <body>
-    <div class="container">
-      <button class="dark-mode-button" onclick="darkMode()">
-        <i class="gg-dark-mode"></i>
-      </button>
-      <div class="calculator">
-        <input type="text" name="screen" id="screen" />
-        <div class="button-div">
-          <button class="color">AC</button>
-          <button class="color">(</button>
-          <button class="color">)</button>
-          <button class="color">/</button>
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button class="color">x</button>
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button class="color">-</button>
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button class="color">+</button>
-          <button class="zero">0</button>
-          <button class="color">.</button>
-          <button>=</button>
+    <main class="calculator">
+      <div class="container">
+        <button class="dark-mode-button" onclick="darkMode()">
+          <i class="gg-dark-mode"></i>
+        </button>
+        <div class="calculator__body">
+          <p class="calculator__result">0</p>
+          <div class="calculator__body--inputs">
+            <button class="action color" data-action="clear">del</button>
+            <button class="color">(</button>
+            <button class="color">)</button>
+            <button data-action="divide" class="color">/</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+            <button data-action="multiply" class="color">x</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button data-action="subtract" class="color">-</button>
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button data-action="add" class="color">+</button>
+            <button class="zero">0</button>
+            <button data-action="decimal" class="color">.</button>
+            <button class="equal" data-action="calculate">=</button>
+          </div>
         </div>
       </div>
-    </div>
+    </main>
+    <script src="./main.js"></script>
   </body>
-  <script src="./main.js"></script>
 </html>
